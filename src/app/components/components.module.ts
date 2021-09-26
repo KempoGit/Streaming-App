@@ -6,6 +6,9 @@ import { AuthGuard } from '@auth0/auth0-angular';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { SharedModule } from '../shared/shared.module';
+import { ShowMoviesComponent } from './show-movies/show-movies.component';
+import { GetMoviesService } from '../services/get-movies.service';
+import { HttpClientModule } from '@angular/common/http';
 
 const routes: Routes = [
   {
@@ -27,14 +30,17 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    ShowMoviesComponent
   ],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
     SharedModule,
-    MaterialDesignModule
-  ]
+    MaterialDesignModule,
+    HttpClientModule
+  ],
+  providers: [GetMoviesService]
 })
 
 

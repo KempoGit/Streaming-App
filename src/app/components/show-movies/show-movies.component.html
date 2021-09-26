@@ -1,0 +1,33 @@
+<!-- Si la API esta cargando -->
+<mat-progress-bar *ngIf="this.moviesArray?.length < 1 && this.loadingMovies" mode="indeterminate"></mat-progress-bar>
+
+<!-- Si la API trajo las peliculas -->
+<ng-container *ngIf="!this.loadingMovies">
+
+    <!-- Si hay peliculas con los filtros -->
+    <div *ngIf="this.moviesArray?.length > 0" class="d-flex justify-content-center flex-wrap animated fadeInUp">
+    
+        <ng-container *ngFor="let movie of this.moviesArray">
+    
+            <div class="card d-flex flex-column movie-card">
+    
+                <img class="movie-img" [src]="movie.images['Poster Art'].url" alt="portada" width="150" height="300">
+    
+                <p class="movie-title">
+                    {{movie.title | slice:0:30}}<ng-container *ngIf="movie.title.length > 30">...</ng-container>
+                </p>
+    
+            </div>
+    
+        </ng-container>
+    
+    </div>
+    
+    <!-- Si no hay peliculas con los filtros -->
+    <div *ngIf="this.moviesArray?.length < 1" class="d-flex justify-content-center flex-wrap animated fadeInUp">
+    
+        <p class="movie-not-found">No se encontraron peliculas</p>
+    
+    </div>
+
+</ng-container>
