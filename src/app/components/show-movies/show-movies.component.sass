@@ -1,26 +1,4 @@
-.animated 
-    -webkit-animation-duration: 1s
-    animation-duration: 1s
-    -webkit-animation-fill-mode: both
-    animation-fill-mode: both
-
-@keyframes fadeInUp
-    from
-        opacity: 0
-        -webkit-transform: translate3d(0, 15%, 0)
-        transform: translate3d(0, 15%, 0)
-    
-    to
-        opacity: 1
-        -webkit-transform: translate3d(0, 0, 0)
-        transform: translate3d(0, 0, 0)
-    
-
-
-.fadeInUp
-    -webkit-animation-name: fadeInUp
-    animation-name: fadeInUp
-
+@use '../../../assets/sass/_animations'
 
 p
     font-size: 1rem
@@ -51,3 +29,10 @@ p
     background: #673ab7
     border-bottom-left-radius: 10px
     border-bottom-right-radius: 10px
+
+mat-form-field
+    width: 150px
+    margin: 10px
+
+.sort-container
+    margin-left: 30px

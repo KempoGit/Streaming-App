@@ -5,6 +5,9 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatSelectModule} from '@angular/material/select';
+import {MatSortModule} from '@angular/material/sort';
 
 @NgModule({
   declarations: [],
@@ -15,6 +18,9 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
     MatIconModule,
     MatMenuModule,
     MatProgressBarModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    MatSortModule
   ],
   exports: [
     CommonModule,
@@ -23,6 +29,9 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
     MatIconModule,
     MatMenuModule,
     MatProgressBarModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    MatSortModule
   ],
 })
 export class MaterialDesignModule { }

@@ -9,6 +9,7 @@ import { SharedModule } from '../shared/shared.module';
 import { ShowMoviesComponent } from './show-movies/show-movies.component';
 import { GetMoviesService } from '../services/get-movies.service';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 const routes: Routes = [
   {
@@ -35,6 +36,7 @@ const routes: Routes = [
   ],
   imports: [
     CommonModule,
+    FormsModule,
     RouterModule.forChild(routes),
     SharedModule,
     MaterialDesignModule,
