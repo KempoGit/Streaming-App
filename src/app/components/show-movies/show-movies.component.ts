@@ -36,6 +36,7 @@ export class ShowMoviesComponent implements OnInit {
     this.loadingMovies = false;
   }
 
+  // Funcion de Angular Material para funcionamiento de Sort header: https://material.angular.io/components/sort/overview
   sortData(sort: Sort) {
     const data = this.sortedMoviesArray.slice();
     if (!sort.active || sort.direction === '') {
@@ -91,8 +92,14 @@ export class ShowMoviesComponent implements OnInit {
 
   }
 
+  // Funcion rapida para Unit Test
+  public validacionDeCodigo(numero: number) {
+    return numero.toString();
+  }
+
 }
 
+// Funcion de Angular Material para funcionamiento de Sort header: https://material.angular.io/components/sort/overview
 function compare(a: number | string, b: number | string, isAsc: boolean) {
   return (a < b ? -1 : 1) * (isAsc ? 1 : -1);
 }

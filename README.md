@@ -14,3 +14,15 @@ Allowed Web Origins
 Allowed Origins (CORS)
 
 Y agregarles http://localhost:4200/
+
+# Testing
+
+Hay una funcion muy sencilla para cumplir con el unit testing en la linea:
+
+96 de show-movies.component.ts
+
+30 de show-movies.component.spec.ts
+
+# Challenge
+
+Finalizo con el challenge para respetar el tiempo planteado
